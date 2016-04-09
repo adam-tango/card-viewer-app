@@ -21,13 +21,15 @@ gulp.task('copy:deps', function(){
     'node_modules/angular2/bundles/router.js',
     'node_modules/rxjs/bundles/Rx.js',
     'node_modules/systemjs/dist/system.js',
-    'node_modules/systemjs/dist/system.js.map'
+    'node_modules/systemjs/dist/system.js.map',
+    'node_modules/tether/dist/js/tether.min.js'
   ]).pipe(gulp.dest('dist/vendor'));
 });
 
 //copy html/css/js files
 gulp.task('copy:src', function(){
   return gulp.src([
+    'src/app/assets/**/*.*',
     'src/bootstrap.js',
     'src/index.html',
     'src/**/*.html',
