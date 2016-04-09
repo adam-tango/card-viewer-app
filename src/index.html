@@ -1,16 +1,56 @@
 <html>
-  <head>
-    <title>Card Viewer</title>
-    <base href="/">
-  </head>
-  <body>
-    <seed-app>loading...</seed-app>
-    <script src="vendor/angular2-polyfills.js"></script>
-    <script src="vendor/system.js"></script>
-    <script src="vendor/angular2.dev.js"></script>
-    <script src="vendor/http.js"></script>
-    <script src="vendor/router.js"></script>
-    <script src="vendor/Rx.js"></script>
-    <script src="bootstrap.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>Card Viewer</title>
+
+  <base href="">
+  <meta name="description" content="">
+  <meta name="theme-color" content="#2E3AA1"><!-- Chrome for Android theme color -->
+  <link rel="manifest" href="manifest.json"><!-- Web Application Manifest -->
+  <meta name="msapplication-TileColor" content="#3372DF"><!-- Tile color for Win8 -->
+  <meta name="mobile-web-app-capable" content="yes"><!-- Add to homescreen for Chrome on Android -->
+  <meta name="application-name" content="card-viewer-app">
+  <link rel="icon" sizes="192x192" href="app/assets/images/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Card Viewer">
+  <link rel="apple-touch-icon" href="app/assets/images/touch/apple-touch-icon.png">
+
+  <!-- Tile icon for Win8 (144x144) -->
+  <meta name="msapplication-TileImage" content="app/assets/images/touch/ms-touch-icon-144x144-precomposed.png">
+  <link rel="icon" type="image/x-icon" href="app/assets/images/favicon.ico">
+
+  <!-- app wide styles -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="app/styles/main.css" rel="stylesheet">
+
+  <!-- IE required polyfills (order matters) -->
+  <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+  <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+  <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+
+</head>
+<body>
+
+<seed-app>loading...</seed-app>
+
+<!-- jQuery first, then Bootstrap JS. -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+
+<!-- app dependencies and bootstrap -->
+<script src="vendor/angular2-polyfills.js"></script>
+<script src="vendor/system.js"></script>
+<script src="vendor/angular2.dev.js"></script>
+<script src="vendor/http.js"></script>
+<script src="vendor/router.js"></script>
+<script src="vendor/Rx.js"></script>
+<script src="bootstrap.js"></script>
+</body>
 </html>
