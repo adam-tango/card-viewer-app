@@ -1,0 +1,44 @@
+{
+  "name": "card-viewer-app",
+  "version": "1.0.0",
+  "description": "Simple web transcript viewer",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp clean && gulp",
+    "tslint": "tslint -c tslint.json app/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adam-tango/card-viewer-app.git"
+  },
+  "keywords": [],
+  "author": "Adam Tango <adam@thejobshoppe.org>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/adamtango/card-viewer-app/issues"
+  },
+  "homepage": "https://github.com/adamtango/card-viewer-app#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-tslint": "^4.3.4",
+    "gulp-tslint-stylish": "^1.1.1",
+    "gulp-typescript": "^2.12.2",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.5",
+    "systemjs": "^0.19.6",
+    "systemjs-builder": "^0.14.11",
+    "typescript": "^1.7.3"
+  },
+  "dependencies": {
+    "angular2": "2.0.0-beta.12",
+    "es6-promise": "3.0.2",
+    "es6-shim": "0.35.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "tslint": "^3.7.1",
+    "typescript": "^1.8.9",
+    "zone.js": "0.6.6"
+  }
+}
