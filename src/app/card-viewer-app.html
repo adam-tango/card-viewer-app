@@ -1,9 +1,25 @@
-<h3>Angular2 Seed</h3>
-<div>
-  <a [routerLink]="['/Home']">Home</a>
-  <a [routerLink]="['/About']">About</a>
-  <a [routerLink]="['/RepoBrowser/RepoList', {org: 'angular'}]">Github Repos</a>
+<nav class="navbar navbar-dark navbar-fixed-top bg-inverse">
+  <!--<button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">-->
+    <!--<span class="sr-only">Toggle navigation</span>-->
+  <!--</button>-->
+  <a class="navbar-brand" href="#">Card Viewer</a>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-sm-3 col-md-2 sidebar">
+      <ul class="nav nav-sidebar">
+        <li class="active"><a [routerLink]="['/Home']">Home <span class="sr-only">(current)</span></a></li>
+        <li><a [routerLink]="['/About']">About</a></li>
+        <li><a [routerLink]="['/RepoBrowser/RepoList', {org: 'angular'}]">Github Repos</a></li>
+      </ul>
+    </div>
+
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
 </div>
-<div>
-  <router-outlet></router-outlet>
-</div>
+

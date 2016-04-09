@@ -1,19 +1,23 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
   <title>Card Viewer</title>
+  <base href="\">
 
-  <base href="">
+  <meta name="author" content="">
   <meta name="description" content="">
+  <link rel="icon" sizes="192x192" href="app/assets/images/touch/chrome-touch-icon-192x192.png">
+
   <meta name="theme-color" content="#2E3AA1"><!-- Chrome for Android theme color -->
-  <link rel="manifest" href="manifest.json"><!-- Web Application Manifest -->
+  <link rel="manifest" href="app/assets/manifest.json"><!-- Web Application Manifest -->
   <meta name="msapplication-TileColor" content="#3372DF"><!-- Tile color for Win8 -->
   <meta name="mobile-web-app-capable" content="yes"><!-- Add to homescreen for Chrome on Android -->
   <meta name="application-name" content="card-viewer-app">
-  <link rel="icon" sizes="192x192" href="app/assets/images/touch/chrome-touch-icon-192x192.png">
 
   <!-- Add to home screen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -27,20 +31,16 @@
 
   <!-- app wide styles -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
   <link href="app/styles/main.css" rel="stylesheet">
-
-  <!-- IE required polyfills (order matters) -->
-  <script src="node_modules/es6-shim/es6-shim.min.js"></script>
-  <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
-  <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
 
 </head>
 <body>
 
-<seed-app>loading...</seed-app>
+<card-viewer-app>loading...</card-viewer-app>
 
 <!-- jQuery first, then Bootstrap JS. -->
+<script src="vendor/tether.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
 
