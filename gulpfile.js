@@ -8,9 +8,37 @@ var tsConfig = require('./tsconfig.json');
 var connect = require('gulp-connect');
 var rimraf = require('gulp-rimraf');
 var tslint = require('gulp-tslint');
+var uglify = require('gulp-uglify');
+var rename = require('gulp-rename');
+var sourcemaps = require('gulp-sourcemaps');
+var plumber = require('gulp-plumber');
+var annotate = require('gulp-ng-annotate');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
+var jshint = require('gulp-jshint');
+var stylish = require('jshint-stylish');
+var jshintfileoutput = require('gulp-jshint-html-reporter');
+
+var onError = function (err) {
+  console.log(err);
+};
 
 //Typescript Config;
 var tsProject = ts.createProject(tsConfig.compilerOptions);
+
+
+gulp.task('jshint', function () {
+  //gulp.task('jshint', ['copy', 'tscompile'], function () {
+  return gulp.src(['./dist/**/*.js'])
+    .pipe(plumber({
+      errorHandler: onError
+    }))
+    .pipe(jshint('.jshintrc'))
+    .pipe(jshint.reporter(stylish))
+    .pipe(jshint.reporter('gulp-jshint-html-reporter', {filename: 'jshint-output.html'}))
+    ;
+});
+
 
 //copy dependencies to dist folder
 gulp.task('copy:deps', function(){
@@ -35,7 +63,12 @@ gulp.task('copy:src', function(){
     'src/**/*.html',
     'src/**/*.css'
   ])
-  .pipe(gulp.dest('dist'))
+    // .pipe(plumber({
+    //   errorHandler: onError
+    // }))
+    // .pipe(ngAnnotate())
+    // .pipe(imagemin({ progressive: true, optimizationLevel: 7, use: [pngquant()] }))
+    .pipe(gulp.dest('dist'))
   .pipe(connect.reload());
 });
 
@@ -72,6 +105,7 @@ gulp.task('tslint', function() {
 gulp.task('default', ['server'], function(){
   gulp.watch(['src/**/*.ts'], ['compile:app']);
   gulp.watch(['src/**/.js', 'src/**/*.html'], ['copy:src']);
+  gulp.watch(['src/**/.js'], ['jshint:src']);
 });
 
 
